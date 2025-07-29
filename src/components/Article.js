@@ -1,7 +1,6 @@
 import React from "react";
 
 function Article({ title, date = "January 1, 1970", preview, minutes }) {
-  // Generate the emoji string
   let emoji = "";
   if (minutes < 30) {
     const cups = Math.ceil(minutes / 5);
@@ -14,6 +13,8 @@ function Article({ title, date = "January 1, 1970", preview, minutes }) {
   return (
     <article>
       <h3>{title}</h3>
+      <small>{date}</small>
+      <br />
       <small>
         {emoji} {minutes} min read
       </small>
